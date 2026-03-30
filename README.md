@@ -34,6 +34,52 @@ The pipeline includes:
 - Libraries:
   - pandas
   - numpy
+  - ⚙️ How to Run
+Upload the notebook to Google Colab.
+Ensure the CSV file is in your Google Drive.
+Run all cells sequentially:
+Mounts Google Drive
+Finds and loads the dataset
+Preprocesses the text
+Vectorizes using BoW and TF-IDF
+Trains and evaluates Logistic Regression, Naive Bayes, and Decision Tree
+Outputs performance metrics
+🧹 Preprocessing Steps
+Convert text to lowercase
+Remove URLs and non-alphabetic characters
+Tokenize text
+Remove stopwords
+Lemmatize words
+📈 Models & Metrics
+Model	Features	Accuracy	Precision	Recall	F1 Score
+Logistic Regression	BoW / TF-IDF	…	…	…	…
+Naive Bayes	BoW / TF-IDF	…	…	…	…
+Decision Tree	BoW / TF-IDF	…	…	…	…
+
+Metrics are computed for each combination of model and feature vector.
+
+🔍 Insights
+TF-IDF usually outperforms Bag of Words.
+Logistic Regression is generally the best model for text classification.
+Naive Bayes is very fast and performs well on smaller datasets.
+Decision Tree may overfit without pruning or ensemble methods.
+💾 Output
+sentiment_results.csv – Contains metrics for all models and feature types.
+clean_text column added to the dataset after preprocessing.
+📁 Project Structure
+sentiment_analysis/
+│
+├─ sentiment_analysis.ipynb       # Full Colab-ready pipeline
+├─ README.md                      # This file
+├─ sentiment_results.csv          # Output metrics (generated)
+└─ IMDB_Dataset.csv               # Dataset (downloaded from Kaggle / stored in Drive)
+📌 References
+IMDb Dataset: Kaggle IMDb Reviews
+NLTK Documentation: https://www.nltk.org/
+Scikit-learn Documentation: https://scikit-learn.org/
+📝 Notes
+This notebook is designed to run end-to-end on Google Colab.
+You can extend it with advanced feature embeddings (Word2Vec, GloVe) or additional models like Random Forest, XGBoost, or deep learning models for improved performance.
   - nltk
   - scikit-learn
 - Google Colab (recommended for easy Drive mounting and GPU support)
